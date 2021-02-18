@@ -1,0 +1,70 @@
+h1{
+    color: white;
+    font-size: 200px;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h2{
+    color: white;
+    font-size: 80px;
+    line-height: 80px;
+    font-family: 'Work Sans', sans-serif;
+}
+h3{
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: justify;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+h3.Computing{
+    display:inline;
+    line-height: 150%;
+    animation: RedBlink 12s linear 0s infinite
+}
+
+
+h3.DesignSoftware{
+    display:inline;
+    line-height: 150%;
+    animation: RedBlink 12s linear 4s infinite
+}
+
+h3.Other{
+    display:inline;
+    line-height: 150%;
+    animation: RedBlink 12s linear 8s infinite
+}
+
+div{
+    width: 75%;
+    height:100%;
+}
+
+canvas#BackGroundCanvas{
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+@keyframes RedBlink{
+    0% {background-color: transparent;
+        color: white;}
+    25%{background-color: transparent;
+        color: white;}
+    50%{background-color: red;
+        colour:black}
+    75%{background-color: transparent;
+        color: white;}
+    100%{background-color: transparent;
+        color: white;
+    }
+}

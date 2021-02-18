@@ -1,4 +1,5 @@
 /*
+
 Javascript code for threejs
 */
 
@@ -14,37 +15,28 @@ function UpdateWindow(){
 };
 
 
-
-var scene = new THREE.Scene();
-var Camera = new THREE.PerspectiveCamera(75 , window.innerWidth / window.innerHeight , 0.1 , 1000);
-var renderer = new THREE.WebGLRenderer();
-var clock = new THREE.Clock();
-renderer.setSize(window.innerWidth,window.innerHeight);
-UpdateWindow();
-document.body.appendChild(renderer.domElement);
-
-
-window.addEventListener('resize' , UpdateWindow);
-
 var  deltaB = 0.1
+var xOffset = 0
 //logic
 var update = function(){
     const positions = geometry.attributes.position.array;
     delta = clock.getDelta();
-    deltaB += delta*0.05;
+    deltaB += delta*(0.05 +scrollY*0.001);
     deltaB = deltaB
 
     const GridData = GenerateGrid(GridDimentions,deltaB);
     const faces = GridToMeshMap(GridDimentions);
     const Vectors = GridToVector(GridData,deltaB);
     const FaceArray = GridFlattern(Vectors , faces);
-    console.log(deltaB)
     FaceArray.forEach((Point,Index) => {
         if (Index%3 == 0){
         positions[Index] = Point
         }
     });
     geometry.attributes.position.needsUpdate = true; // required after the first render
+    console.log(window.scrollY);
+    Camera.position.y = 4 + window.scrollY*0.005;
+    Camera.position.z =  15+ window.scrollY*0.005;
 
 
 };
@@ -101,7 +93,7 @@ function GridToMeshMap(InputDimentions){
             d = i+InputDimentions.Width+1;
             //console.log(a,b,c,d)
             Output.push([a,b,c])
-            Output.push([b,c,d])
+            //Output.push([b,c,d])
         }
     }
     return Output
@@ -117,6 +109,20 @@ function GridFlattern(Points , Faces){
     return new Float32Array(output)
 }
 
+const canvas = document.querySelector("#BackGroundCanvas");
+var scene = new THREE.Scene();
+var Camera = new THREE.PerspectiveCamera(75 , window.innerWidth / window.innerHeight , 0.1 , 1000);
+var renderer = new THREE.WebGLRenderer({canvas});
+var clock = new THREE.Clock();
+renderer.setSize(window.innerWidth,window.innerHeight);
+UpdateWindow();
+document.body.appendChild(renderer.domElement);
+
+
+window.addEventListener('resize' , UpdateWindow);
+
+
+
 
 const GridData = GenerateGrid(GridDimentions,4);
 const faces = GridToMeshMap(GridDimentions);
@@ -125,7 +131,6 @@ const FaceArray = GridFlattern(Vectors , faces);
 
 
 
-console.log(FaceArray)
 
 var geometry = new THREE.BufferGeometry();
 geometry.setAttribute( 'position', new THREE.BufferAttribute( FaceArray, 3 ) );
@@ -161,9 +166,9 @@ const geometry2 = new THREE.BoxGeometry( 1, 1, 1 );
 const material2 = new THREE.MeshBasicMaterial( {color: 0x000000} );
 const cube = new THREE.Mesh( geometry2, material2 );
 scene.add( mesh );
-Camera.position.z = 20
+Camera.position.z = 15
 Camera.position.x = -GridDimentions.Width/2
-Camera.position.y = 5
+Camera.position.y = 4
 ;
 
 
