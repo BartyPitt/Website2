@@ -1,79 +1,99 @@
 <html>
-    <head> 
-        <title>>Barty Pitt's Portfolio</title>
-        <style>
-            body { margin: 0;}
-            canvas {width: 100% ; height: 100%;};
-        </style>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <canvas id ="BackGroundCanvas"></canvas>
-        <div>
-        <h1> 
-            BartyPitt.com<br>
-        </h1>
+
+<head>
+    <title>>>>Barty Pitt's Portfolio<<<</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <canvas id="BackGroundCanvas"></canvas>
+    <div class="flex-grid">
+        <div class = "Top">
+            <h1>Barty</h1>
+            <h1>Pitt</h1>
+            <h1>.com</h1>
+            
         </div>
 
-        <div>
+        <div class = "col">
             <h2>
                 About me: <br>
             </h2>
             <br>
             <h3>
-                Hello , I am Barty Pitt , 
-                A forth year design engineering student currently 
-                studying at Imperial College London.  
-                I am interested in Machine Learning , 
-                Generative Design and Robotics. 
-                If you are interested in my CV or are actively hiring, 
+                Hello , I am Barty Pitt ,
+                A forth year design engineering student currently
+                studying at Imperial College London.
+                I am interested in Machine Learning ,
+                Generative Design and Robotics.
+                If you are interested in my CV or are actively hiring,
                 my contact details can be found at the bottom of the page.
             </h3>
 
-        </h1>
+            </h1>
+        </div>
+        <div class ="col">
+            <h2>
+                Skills:
+            </h2>
+            <ul class="animated-list">
+                <li class="Computing">Machine Vision </li>
+                <li class="DesignSoftware">Solidworks </li>
+                <li class="Other">Word </li>
+                <li class="Computing">Python </li>
+                <li class="DesignSoftware">Autocad </li>
+                <li class="Other">Excel </li>
+                <li class="Computing">Matlab </li>
+                <li class="DesignSoftware">Fusion 360 </li>
+                <li class="Other">GIT </li>
+                <li class="Computing">C </li>
+                <li class="DesignSoftware">Autocad Inventor </li>
+                <li class="Other">Linux </li>
+                <li class="Computing">C++ </li>
+                <li class="DesignSoftware">Altium Designer </li>
+                <li class="Other">Finite element analysis </li>
+                <li class="Computing">Labview </li>
+                <li class="DesignSoftware">Adobe Indesign </li>
+                <li class="Other">PCB Design </li>
+                <li class="Computing">RTOS </li>
+                <li class="DesignSoftware">Adobe Illustrator </li>
+                <li class="Other">Circuit Modeling </li>
+                <li class="Computing">ROS </li>
+                <li class="DesignSoftware">OpenSCAD </li>
+                <li class="Other">3d Printing </li>
+                <li class="Computing">Machine learning </li>
+                <li class="DesignSoftware">Fritzing </li>
+                <li class="Other">CNC Machining </li>
+                <li class="Computing">Javascript </li>
+                <li class="DesignSoftware">Paint.net </li>
+                <li class="Other">Optimization </li>
+            </ul>
+
         </div>
         <div>
             <h2>
-                Here are some of my skills:
+                Contact Me:
             </h2>
-            <h3 class = "Computing">Machine Vision </h3>
-            <h3 class = "DesignSoftware">Solidworks </h3>
-            <h3 class = "Other">Word </h3>
-            <h3 class = "Computing">Python </h3>
-            <h3 class = "DesignSoftware">Autocad </h3>
-            <h3 class = "Other">Excel </h3>
-            <h3 class = "Computing">Matlab </h3>
-            <h3 class = "DesignSoftware">Fusion 360 </h3>
-            <h3 class = "Other">GIT </h3>
-            <h3 class = "Computing">C </h3>
-            <h3 class = "DesignSoftware">Autocad Inventor </h3>
-            <h3 class = "Other">Linux </h3>
-            <h3 class = "Computing">C++ </h3>
-            <h3 class = "DesignSoftware">Altium Designer </h3>
-            <h3 class = "Other">Finite element analysis </h3>
-            <h3 class = "Computing">Labview </h3>
-            <h3 class = "DesignSoftware">Adobe Indesign </h3>
-            <h3 class = "Other">PCB Design </h3>
-            <h3 class = "Computing">RTOS </h3>
-            <h3 class = "DesignSoftware">Adobe Illustrator </h3>
-            <h3 class = "Other">Circuit Modeling </h3>
-            <h3 class = "Computing">ROS </h3>
-            <h3 class = "DesignSoftware">OpenSCAD </h3>
-            <h3 class = "Other">3d Printing </h3>
-            <h3 class = "Computing">Machine learning </h3>
-            <h3 class = "DesignSoftware">Fritzing </h3>
-            <h3 class = "Other">CNC Machining </h3>
-            <h3 class = "Computing">Javascript </h3>
-            <h3 class = "DesignSoftware">Paint.net </h3>
-            <h3 class = "Other">Optimization </h3>
-
+            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+                <fieldset id="fs-frm-inputs">
+                  <label for="full-name">Full Name</label> <br>
+                  <input type="text" name="name" id="full-name" placeholder="First and Last" required=""><br>
+                  <label for="email-address">Email Address</label><br>
+                  <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required=""><br>
+                  <label for="message">Message</label><br>
+                  <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea><br>
+                  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission"><br>
+                </fieldset>
+                <input type="submit" value="Submit">
+              </form>
         </div>
-        <script src='js/perlin.js'></script>
-        <script src = "js/three.js"> </script>
-        <script src="js/main.js"></script>
-    </body>
+    </div>
+    <script src='js/perlin.js'></script>
+    <script src="js/three.js"> </script>
+    <script src="js/main.js"></script>
+</body>
 
 
 </html>
