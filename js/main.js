@@ -24,7 +24,7 @@ var BackgroundInfomation = {
     speed : 0.5,
     CameraY : 3,
     CameraZ : 15,
-    Amplitude : 1,
+    Amplitude : 0,
     BGColour: 0x000000,
     BGMeshColour: 0xffffff,
     currentDelta : 0,
