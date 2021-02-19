@@ -69,7 +69,7 @@ var ScrollFunctions = {
         BackgroundInfomation.CameraY = 3 + CurrentValue*5;
         BackgroundInfomation.CameraZ = 14+ CurrentValue*3;
         BackgroundInfomation.Amplitude = CurrentValue *3;
-        BackgroundInfomation.deltaConstant = 0.1 + window.scrollY * 0.001;
+        BackgroundInfomation.deltaConstant = 0.1 + window.scrollY * 0.002;
         return
     },
     Pageone(CurrentValue){
@@ -144,7 +144,7 @@ function GridToVector(InputGrid , scale){
     Output = []
     InputGrid.forEach((Row , Y )=> {
         Row.forEach((Point , X) => {
-            var Value = [Point,X * scale , Y * scale ];
+            var Value = [Point*scale,X , Y ];
             Output.push(Value);
         });
     });
@@ -197,7 +197,7 @@ window.addEventListener('resize' , UpdateWindow);
 
 const GridData = GenerateGrid(GridDimentions,4);
 const faces = GridToMeshMap(GridDimentions);
-const Vectors = GridToVector(GridData,1);
+const Vectors = GridToVector(GridData,0);
 const FaceArray = GridFlattern(Vectors , faces);
 
 
@@ -212,22 +212,6 @@ mesh.rotation.z = Math.PI/2;
 mesh.rotation.y = 0;
 
 scene.fog = new THREE.Fog(0x301934, 1, 20);
-
-/*
-var points = Vectors.map(Vector => {
-        var [a , b, c] = Vector
-        console.log(Vector)
-        return new THREE.Vector3(a,b,c);
-});
-
-
-
-const geometry2 = new THREE.BufferGeometry().setFromPoints( points );
-const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
-const line = new THREE.Line( geometry2, material );
-*/
-
-
 scene.add( mesh );
 Camera.position.z = 15
 Camera.position.x = -GridDimentions.Width/2
