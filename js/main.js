@@ -94,9 +94,11 @@ function ScrollHandler(){
             break;
         case 1:
             ScrollFunctions.Pageone(PageOffset);
+            ScrollFunctions.TitlePage(1);
             break;
-        case 2:
-            break
+        default:
+            ScrollFunctions.Pageone(1);
+            ScrollFunctions.TitlePage(1);
 
 
     }

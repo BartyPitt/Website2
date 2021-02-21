@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0px;
     font-family: 'Work Sans', sans-serif;
-    background-color: black;
-    color: white;
+    color: black;
     font-weight: normal;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px;
 }
 
 html {
@@ -53,27 +53,25 @@ ul {
 
 nav li {
     list-style-type: none;
-    font-size: 1.5vw;
 }
 
 nav li a {
     font-weight: bold;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     padding: 0.5em;
-    margin: 0.4em 0.4em;
+    margin: 0.2em 0.2em;
     list-style-type: none;
     transition: 0.3s;
     text-decoration: none;
 }
-
 
 nav li a:hover {
     background-color: cadetblue;
 }
 
 nav li a:visited {
-    color: black;
+    color: white;
 }
 
 /* Sections */
@@ -89,15 +87,14 @@ section {
 
 p {
     width: 100%;
-    font-size: 2vw;
 }
 
 /* Skills */
 
 .animated-list li {
-    color: black;
-    background-color: white;
+    color: white;
     font-weight: bold;
+    background-color: black;
     padding: 0.5em;
     margin: 0.2em 0.2em;
     list-style-type: none;
@@ -116,12 +113,18 @@ p {
 }
 
 @keyframes skill-item-color-phase {
+    0% { background-color: black; }
+    11% { background-color: cadetblue; }
+    22% { background-color: cadetblue; }
+    33% { background-color: black; }
+}
+
+@keyframes skill-item-color-phase-dark {
     0% { background-color: white; }
     11% { background-color: cadetblue; }
     22% { background-color: cadetblue; }
     33% { background-color: white; }
 }
-
 
 /* Form */
 
@@ -139,7 +142,7 @@ input, textarea {
     max-width: 100%;
     font-size: 1em;
     color: black;
-    border: none;
+    border: 1px solid black;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -147,7 +150,6 @@ input, textarea {
 }
 
 .submit-button {
-    color: white;
     border: none;
     background-color: transparent;
     text-transform: uppercase;
@@ -164,16 +166,60 @@ input, textarea {
     text-shadow: 3px 3px black;
 }
 
-
-svg {
-    fill: white;
-    filter: url('#shadow');
-    padding: 3em;
+svg{
+    fill:white
 }
 
-
-
 svg:hover{
-    fill: cadetblue;
-    filter: url('#shadowH');
+    fill:cadetblue
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    nav li a {
+        background-color: white;
+        color: black;
+    }
+
+    nav li a:visited {
+        color: black;
+    }
+
+    .animated-list li {
+        color: black;
+        background-color: white;
+    }
+
+    .Computing {
+        animation: skill-item-color-phase-dark 6s linear 0s infinite
+    }
+    
+    .DesignSoftware {
+        animation: skill-item-color-phase-dark 6s linear 2s infinite
+    }
+    
+    .Other {
+        animation: skill-item-color-phase-dark 6s linear 4s infinite
+    }
+
+    input, textarea {
+        border: none;
+    }
+
+    .submit-button {
+        color: white;
+        text-shadow: 3px 3px cadetblue;
+    }
+    
+    .submit-button:hover {
+        color: cadetblue;
+        text-shadow: 3px 3px black;
+    }
+
 }
