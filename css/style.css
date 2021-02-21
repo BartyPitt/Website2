@@ -1,96 +1,21 @@
 body {
     margin: 0;
+    padding: 0px;
     font-family: 'Work Sans', sans-serif;
-    color: white;
+    color: black;
+    font-weight: normal;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
 }
 
-canvas {
-    width: 100%;
-    height: 100%;
-    background: purple;
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-h1{
-    color: white;
-    font-size: 15em;
-    text-align: center;
-    display: inline;
-
-}
-
-h2{
-    color: white;
-    font-size: 80px;
-    line-height: 80px;
-}
-h3{
-    color: white;
-    font-size: 40px;
-    line-height: 40px;
-    text-align: justify;
-    
-}
-
-
-
-
-
-
-ul.animated-list{
-    display: flex;
-    color:  white;
-    flex-wrap: wrap;
-    padding-inline-start: 0;
-
-}
-.animated-list li{
-    background-color: transparent;
-    padding  :0.3em;
-    margin: 0.1em;
-    font-size: 30px;
-    list-style-type: none;
-    text-align: center;
-}
-
-
-li.Computing{
-    
-    animation: RedBlink 12s linear 0s infinite
-}
-
-
-li.DesignSoftware{
-    animation: RedBlink 12s linear 4s infinite
-}
-
-li.Other{
-
-    animation: RedBlink 12s linear 8s infinite
-}
-
-
-
-
-
-
-
-div.flex-grid{
-    display:flex;
-    flex-direction: column;
-}
-
-div.col{
-    flex:1;
-    min-height: 100vh;
-    max-width: 1000px;
-}
-
-div.Top{
-    flex:1;
-    min-height: 100vh;
-    max-width: 100vw;
-
-}
+/* Canvas */
 
 canvas#BackGroundCanvas{
     width: 100vw;
@@ -102,30 +27,191 @@ canvas#BackGroundCanvas{
     z-index: -9999;
 }
 
-@keyframes RedBlink{
-    0% {background-color: transparent;
-        color: white;}
-    16%{background-color: cyan ;
-        colour:black;}
-    33%{background-color: transparent;
-        color: white;}
+/* Headings */
+
+h1, h2 {
+    font-weight: bold;
+    text-shadow: 0.4vw 0.4vw cadetblue;
 }
 
-fieldset{
-    border : 0;
+h1 {
+    font-size: 13vw;
 }
 
-label{
-    font-size: 30px;
+h2 {
+    text-transform: uppercase;
+    font-size: 5vw;
 }
 
-input{
+/* Nav bar */
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    margin: 0.2em 0.2em;
+    list-style-type: none;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: cadetblue;
+}
+
+nav li a:visited {
+    color: white;
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p {
     width: 100%;
-    max-width: 500px;
-    font-size: 30px;
 }
-textarea{
+
+/* Skills */
+
+.animated-list li {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.5em;
+    margin: 0.2em 0.2em;
+    list-style-type: none;
+}
+
+.Computing {
+    animation: skill-item-color-phase 6s linear 0s infinite
+}
+
+.DesignSoftware {
+    animation: skill-item-color-phase 6s linear 2s infinite
+}
+
+.Other {
+    animation: skill-item-color-phase 6s linear 4s infinite
+}
+
+@keyframes skill-item-color-phase {
+    0% { background-color: black; }
+    11% { background-color: cadetblue; }
+    22% { background-color: cadetblue; }
+    33% { background-color: black; }
+}
+
+@keyframes skill-item-color-phase-dark {
+    0% { background-color: white; }
+    11% { background-color: cadetblue; }
+    22% { background-color: cadetblue; }
+    33% { background-color: white; }
+}
+
+/* Form */
+
+form {
     width: 100%;
-    max-width: 500px;
-    font-size: 30px;
+    height: 60vh;
+}
+
+fieldset {
+    border: none;
+}
+
+input, textarea {
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 1em;
+    color: black;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px cadetblue;
+}
+
+.submit-button {
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: none;
+    text-shadow: 3px 3px cadetblue;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    color: cadetblue;
+    text-shadow: 3px 3px black;
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    nav li a {
+        background-color: white;
+        color: black;
+    }
+
+    nav li a:visited {
+        color: black;
+    }
+
+    .animated-list li {
+        color: black;
+        background-color: white;
+    }
+
+    .Computing {
+        animation: skill-item-color-phase-dark 6s linear 0s infinite
+    }
+    
+    .DesignSoftware {
+        animation: skill-item-color-phase-dark 6s linear 2s infinite
+    }
+    
+    .Other {
+        animation: skill-item-color-phase-dark 6s linear 4s infinite
+    }
+
+    input, textarea {
+        border: none;
+    }
+
+    .submit-button {
+        color: white;
+        text-shadow: 3px 3px cadetblue;
+    }
+    
+    .submit-button:hover {
+        color: cadetblue;
+        text-shadow: 3px 3px black;
+    }
+
 }
