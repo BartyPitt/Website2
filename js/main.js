@@ -83,7 +83,7 @@ var ScrollFunctions = {
 
 
 function ScrollHandler(){
-    var Position =2* window.scrollY/window.innerWidth
+    var Position =2* window.scrollY/window.innerHeight
     var PageNumber = Math.floor(Position);
     var PageOffset = Position - PageNumber;
     console.log(PageNumber)
