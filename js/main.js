@@ -90,6 +90,7 @@ function ScrollHandler(){
     switch(PageNumber){
         case 0:
             ScrollFunctions.TitlePage(PageOffset);
+            ScrollFunctions.Pageone(0);
             break;
         case 1:
             ScrollFunctions.Pageone(PageOffset);
