@@ -69,7 +69,7 @@ var ScrollFunctions = {
         BackgroundInfomation.CameraY = 3 + CurrentValue*5;
         BackgroundInfomation.CameraZ = 14+ CurrentValue*3;
         BackgroundInfomation.Amplitude = CurrentValue *3;
-        BackgroundInfomation.deltaConstant = 0.1 + window.scrollY * 0.002;
+        BackgroundInfomation.deltaConstant = CurrentValue ;
         return
     },
     Pageone(CurrentValue){
@@ -83,7 +83,7 @@ var ScrollFunctions = {
 
 
 function ScrollHandler(){
-    var Position =2* window.scrollY/window.innerHeight
+    var Position = window.scrollY/window.innerHeight
     var PageNumber = Math.floor(Position);
     var PageOffset = Position - PageNumber;
     console.log(PageNumber)
