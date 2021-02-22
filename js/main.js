@@ -86,7 +86,6 @@ function ScrollHandler(){
     var Position = window.scrollY/window.innerHeight
     var PageNumber = Math.floor(Position);
     var PageOffset = Position - PageNumber;
-    console.log(PageNumber)
     switch(PageNumber){
         case 0:
             ScrollFunctions.TitlePage(PageOffset);

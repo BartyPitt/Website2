@@ -167,7 +167,6 @@ input, textarea {
 
 svg {
     fill: white;
-    filter: url('#shadow');
     padding: 3em;
 }
 
@@ -175,5 +174,4 @@ svg {
 
 svg:hover{
     fill: cadetblue;
-    filter: url('#shadowH');
 }
