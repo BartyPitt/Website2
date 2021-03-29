@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    font-weight: bold;
+    text-shadow: 0.4vw 0.4vw cadetblue;
+}
+
+h1 {
+    font-size: 13vw;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 5vw;
+    mix-blend-mode: mul;
+}
+
+.Portfolio {
+    z-index: 4;
+    position: relative;
+}
+
+.Info{
+    position: relative;
+    height: 100vh;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.Info >div{
+    position: relative;
+    text-align: center;
+    z-index: 5;
+}
+
+
+.Sliders{
+    z-index: 1;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    height: 80%;
+    overflow: hidden;
+    width: 80%;
+    visibility: hidden;
+}
+.Sliders > img{
+    width: 100%;
+}
