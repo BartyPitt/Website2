@@ -17,9 +17,8 @@ RCCar = {
 "Body": ["Creating, designing and 3d printing a steering, and suspension mechanism for the car",
 "Designing and iterating on gear box designs to improve on the torque being applied to the wheels",
 "Creating an electronics system capable of providing power to the wheels."],
-"Hero":'  <section id="HeroContent"><iframe width = 100% height = "500vh" title="4x4 World Finals Car unexploded" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4d59c0446b694caaa2613083f8620559/embed"></iframe> <p> Interactive 3d model of the world final car.</p></section>'
+"Hero":'<iframe width = 100% height = "500vh" title="4x4 World Finals Car unexploded" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4d59c0446b694caaa2613083f8620559/embed"></iframe> <p> Interactive 3d model of the world final car.</p>'
 },
-
 
 HeadLabs = {
     "title":"Head Labs Internship",
