@@ -5,6 +5,10 @@ function ContentCreator(DataIn){
     SubText = document.getElementById("Subtext")
     SubText.textContent = DataIn.description;
     BulletList = document.getElementById("BulletPoints");
+    if (DataIn.Hero){
+        HeroSpot = document.getElementById("main");
+        HeroSpot.prepend(DataIn.Hero);
+    }
     DataIn.Body.forEach(ListItem => {
         bullet = document.createElement("li");
         bullet.textContent = ListItem;
@@ -12,11 +16,13 @@ function ContentCreator(DataIn){
         BulletList.appendChild(bullet);
     });
     ImageZone = document.getElementById("main");
-    Data.image.forEach(ImagePath => { 
+    if(DataIn.image){
+    DataIn.image.forEach(ImagePath => { 
         TempImage = new Image(500 , 300);
         TempImage.src = ImagePath;
         ImageZone.appendChild(TempImage);
     });
 }
+}
 
-ContentCreator(Data);
+ContentCreator(Data[2]);
