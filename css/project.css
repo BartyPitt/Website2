@@ -51,6 +51,7 @@ section {
     min-height: 50vh;
     padding: 1vw;
     max-width: 500px;
+    min-width: 40vw;
 }
 ul{
     text-align: justify;
@@ -64,6 +65,11 @@ div {
 
 p {
     width: 100%;
+    font-size:2vh;
+}
+
+ul{
+    font-size:2vh
 }
 
 img {
@@ -72,6 +78,9 @@ img {
     max-height: 100%;
     padding: 1vw;
     object-fit: cover;
+    min-width: 40vw;
 }
 
-/* Skills */
+a {
+    color: inherit;
+}

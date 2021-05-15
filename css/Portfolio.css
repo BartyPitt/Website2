@@ -12,6 +12,8 @@ body {
 h1, h2 {
     font-weight: bold;
     text-shadow: 0.4vw 0.4vw cadetblue;
+    background: black;
+    padding: 2vw;
 }
 
 h1 {
@@ -24,7 +26,7 @@ h2 {
     mix-blend-mode: mul;
 }
 
-.Portfolio {
+#Portfolio {
     z-index: 4;
     position: relative;
 }
@@ -33,15 +35,28 @@ h2 {
     position: relative;
     padding: 10px;
     margin: 10px;
-    max-height: 100vh;
+    max-height: 50vw;
 }
 
 .Info>div{
     position: absolute;
     bottom: 20%;
-    max-width: 500px;
+    max-width: 750px;
+    z-index: 2;
 }
 
-img{
+.Info>img{
     width: 100%;
+    max-height: 50vw;
+    object-fit: cover;
+    z-index: 1;
+    filter: grayscale(1);
+}
+
+.Info:hover img{
+    filter: grayscale(0);
+}
+
+a {
+    color: inherit;
 }

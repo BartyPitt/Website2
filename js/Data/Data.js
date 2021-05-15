@@ -73,7 +73,7 @@ Calendar = {
     "title":"IoT Calendar",
     "Role":"Lead design.",
     "description":"Working with low power IoT chips and electronics to design a system that can be successfully integrated into an existing calendar system.",
-    "image":null,
+    "image":["Images/portfolio/Iot/Epaper.JPG","Images/portfolio/Iot/FritzigCircuit.PNG","Images/portfolio/Iot/IOTCode.PNG"],
     "Body":["Creating a circuit built around the ESP32 chip.",
             "Using Microsofts rest API to get data from Microsoft outlook calendar.",
             "Working with low power E paper displays to display data to the user."
@@ -109,7 +109,7 @@ Polaris = {
     "title":"Polaris modern day shapes.",
     "Role":"Electrical and Mechanical Engineer.",
     "description":"Working within a small group to create a high-level concept for brining inter-ship communication into the 21st century.",
-    "image":null,
+    "image":["Images/portfolio/Polaris/MainAssembly.png","Images/portfolio/Polaris/MainAssembly2.png"],
     "Body":[
         "Using a system of polarising filters to create an image with very little power.",
         "Designing a system capable of being integrating into existing ship systems.",

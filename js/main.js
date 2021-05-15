@@ -160,7 +160,7 @@ function ScrollHandler() {
 }
 
 
-window.addEventListener('scroll', ScrollHandler)
+window.addEventListener('scroll', ScrollHandler);
 
 
 
@@ -179,13 +179,13 @@ var BackgroundInfomation = {
 }
 
 function BackgroundUpdater() {
-    const positions = geometry.attributes.position.array
+    const positions = geometry.attributes.position.array;
     delta = clock.getDelta();
-    BackgroundInfomation.currentDelta += delta * BackgroundInfomation.deltaConstant
-    FinalisedDelta = BackgroundInfomation.currentDelta + 1
+    BackgroundInfomation.currentDelta += delta * BackgroundInfomation.deltaConstant;
+    FinalisedDelta = BackgroundInfomation.currentDelta + 1;
 
-    Camera.position.y = BackgroundInfomation.CameraY
-    Camera.position.z = BackgroundInfomation.CameraZ
+    Camera.position.y = BackgroundInfomation.CameraY;
+    Camera.position.z = BackgroundInfomation.CameraZ;
 
     const GridData = GenerateGrid(GridDimentions, FinalisedDelta);
     const faces = GridToMeshMap(GridDimentions);
@@ -203,7 +203,7 @@ function BackgroundUpdater() {
     scene.background.setHSL(0.8, 0.35, BackgroundInfomation.backgroundSatuation);
     mesh.material.color.setHSL(0.92, 73, BackgroundInfomation.meshSaturation);
     geometry.attributes.position.needsUpdate = true;
-    material.needsUpdate = true
+    material.needsUpdate = true;
 
 
 }
