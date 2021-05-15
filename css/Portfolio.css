@@ -57,6 +57,11 @@ h2 {
     filter: grayscale(0);
 }
 
+.Info:hover div{
+    text-decoration: underline;
+}
+
 a {
     color: inherit;
+    text-decoration: none;
 }

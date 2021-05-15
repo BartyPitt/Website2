@@ -31,6 +31,7 @@ var ScrollFunctions = {
         return
 
     },
+    /*
     PortfolioValues(AbsoluteScrollPos) {
         var CurrentStartPage = 3;
         var PagePosition = ((0.5 - AbsoluteScrollPos % 1) * 200).toFixed(0) + "%";
@@ -69,13 +70,13 @@ var ScrollFunctions = {
             }
         }
     }
+    */
 }
 
 function PageScrollOffset() {
     let PagePositions = [0];
 
     const MainOffset = document.getElementById("MainContent").offsetTop;
-    const PortfolioOffset = document.getElementById("Portfolio").offsetTop;
 
     var Sections = document.getElementById('MainContent').children;
     if (Sections < 0) {
@@ -88,16 +89,6 @@ function PageScrollOffset() {
             var element = Sections.item(index);
             PagePositions.push(element.offsetTop);
             //console.log(element.textContent , element.offsetTop)
-        }
-    }
-
-    var Sections = document.getElementById('Portfolio').children;
-    if (Sections < 0) {
-    }
-    else {
-        for (var index = 0; index < Sections.length; index++) {
-            var element = Sections.item(index);
-            PagePositions.push(element.offsetTop + PortfolioOffset);
         }
     }
     PagePositions.push(document.body.clientHeight)
@@ -143,18 +134,14 @@ function ScrollHandler() {
         case 0:
             ScrollFunctions.TitlePage(PageOffset);
             ScrollFunctions.Pageone(0);
-            ScrollFunctions.PortfolioValues(0);
             break;
         case 1:
             ScrollFunctions.Pageone(PageOffset);
             ScrollFunctions.TitlePage(1);
-            ScrollFunctions.PortfolioValues(0);
             break;
         default:
             ScrollFunctions.Pageone(1);
             ScrollFunctions.TitlePage(1);
-            ScrollFunctions.PortfolioValues(Position);
-
     }
 
 }
