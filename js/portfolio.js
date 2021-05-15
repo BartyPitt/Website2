@@ -34,7 +34,7 @@ Data.forEach((page , itterator) => {
         MinorDiv.appendChild(mainText);
         InfoDiv.appendChild(MinorDiv);
         InfoDiv.appendChild(TempImage);
-        InfoDiv.href = "http://127.0.0.1:5500/project.html?id=" +itterator;
+        InfoDiv.href = "http:/bartypitt.com/project.html?id=" +itterator;
         console.log(InfoDiv.href);
         PortfolioSection.appendChild(InfoDiv)
     }
