@@ -8,14 +8,14 @@ I have not figured what to do after that.
 
 
 /*
-<div class=Info>
+<a class=Info>
     <div>
         <h2>
             Aura Smart Lamp
         </h2>
     </div>
     <img src = 'Images\portfolio\AuraLamp.png'>
-</div>
+</a>
  the target thing to create */
  
 

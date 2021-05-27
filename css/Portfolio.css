@@ -9,11 +9,11 @@ body {
     margin-right: auto;
 }
 
-h1, h2 {
+h2 {
     font-weight: bold;
     text-shadow: 0.4vw 0.4vw cadetblue;
-    background: black;
-    padding: 2vw;
+    background-color: black;
+    padding: 2vh;
 }
 
 h1 {
@@ -41,7 +41,7 @@ h2 {
 .Info>div{
     position: absolute;
     bottom: 20%;
-    max-width: 750px;
+    max-width: 1000px;
     z-index: 2;
 }
 
@@ -57,8 +57,8 @@ h2 {
     filter: grayscale(0);
 }
 
-.Info:hover div{
-    text-decoration: underline;
+div>h2:hover{
+    text-shadow:0.4vw 0.4vw purple;
 }
 
 a {

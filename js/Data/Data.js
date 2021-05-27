@@ -57,7 +57,7 @@ Kickstarter = {
 },
 
 Robot = {
-    "title":"Connect 4 Robot.",
+    "title":"Connect 4 Robot",
     "Role":" Software development.",
     "description": "Training a robot arm so that it could play connect 4 against a human player",
     "image":["Images/portfolio/Robot/Gazebo_and_Rviz_side_by_side.png","Images/portfolio/Robot/snapshot_one.png","Images/portfolio/Robot/yellow_masks.png"],
@@ -71,6 +71,7 @@ Robot = {
 
 Calendar = {
     "title":"IoT Calendar",
+    
     "Role":"Lead design.",
     "description":"Working with low power IoT chips and electronics to design a system that can be successfully integrated into an existing calendar system.",
     "image":["Images/portfolio/Iot/Epaper.JPG","Images/portfolio/Iot/FritzigCircuit.PNG","Images/portfolio/Iot/IOTCode.PNG"],
@@ -94,7 +95,7 @@ Bo = {
 },
 
 SelfBalancing = {
-    "title": "Self balancing Dancing Robot.",
+    "title": "Self balancing Dancing Robot",
     "Role": "Software engineering.",
     "description": "Creating a two-wheeled balancing robot capable of dancing in time with a song played from a speaker.",
     "image":null,
@@ -106,7 +107,7 @@ SelfBalancing = {
 },
 
 Polaris = {
-    "title":"Polaris modern day shapes.",
+    "title":"Polaris modern day day-shapes",
     "Role":"Electrical and Mechanical Engineer.",
     "description":"Working within a small group to create a high-level concept for brining inter-ship communication into the 21st century.",
     "image":["Images/portfolio/Polaris/MainAssembly.png","Images/portfolio/Polaris/MainAssembly2.png"],
