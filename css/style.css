@@ -35,15 +35,17 @@ canvas#BackGroundCanvas{
 h1, h2 {
     font-weight: bold;
     text-shadow: 0.4vw 0.4vw cadetblue;
+    overflow-wrap: break-word;
 }
 
 h1 {
-    font-size: 13vw;
+    font-size:calc(50px + 10vw);
+    word-spacing: -0.75ex;
 }
 
 h2 {
     text-transform: uppercase;
-    font-size: 5vw;
+    font-size:calc(40px + 5vw);
 }
 
 /* Nav bar */
@@ -56,7 +58,7 @@ ul {
 
 nav li {
     list-style-type: none;
-    font-size: 1.5vw;
+    font-size: 3vh;
 }
 
 nav li a {
