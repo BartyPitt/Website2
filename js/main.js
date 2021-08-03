@@ -31,46 +31,7 @@ var ScrollFunctions = {
         return
 
     },
-    /*
-    PortfolioValues(AbsoluteScrollPos) {
-        var CurrentStartPage = 3;
-        var PagePosition = ((0.5 - AbsoluteScrollPos % 1) * 200).toFixed(0) + "%";
-        var PageNumber = Math.floor(AbsoluteScrollPos) - CurrentStartPage;
-        var MovingDivs = document.getElementsByClassName('Sliders');
-
-        let PagePositions = []
-        var Sections = document.getElementById('Portfolio').children;
-        const PortfolioOffset = document.getElementById("Portfolio").offsetTop;
-
-        if (Sections <= 0) {
-        }
-        else {
-            for (var index = 0; index < Sections.length; index++) {
-                var element = Sections.item(index);
-                PagePositions.push(element.offsetTop + PortfolioOffset);
-            }
-        }
-        PagePositions.push(document.body.clientHeight)
-
-        //top of each image should be Absolute - current
-
-        if (PageNumber < 0) {
-        }
-        for (var index = 0; index < MovingDivs.length; index++) {
-            var element = MovingDivs.item(index)
-            if (index == PageNumber) {
-                //console.log(index ,PagePosition );
-                element.style.visibility = 'visible';
-                element.style.left = PagePosition;
-                //element.style.top = PagePosition;
-                console.log(element.style.top);
-            }
-            else {
-                element.style.visibility = 'hidden'
-            }
-        }
-    }
-    */
+    
 }
 
 function PageScrollOffset() {
@@ -281,6 +242,7 @@ UpdateWindow();
 document.body.appendChild(renderer.domElement);
 
 
+
 window.addEventListener('resize', UpdateWindow);
 
 
@@ -308,7 +270,5 @@ Camera.position.z = 15
 Camera.position.x = -GridDimentions.Width / 2
 Camera.position.y = 4
     ;
-
-
 
 GameLoop();
