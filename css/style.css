@@ -47,6 +47,7 @@ h1 {
 h2 {
     text-transform: uppercase;
     font-size:calc(40px + 5vw);
+    max-width: 600px;
 }
 
 
@@ -147,7 +148,7 @@ section ul{
 
 p {
     width: 100%;
-    font-size: 2vw;
+    font-size: 5vh;
 }
 
 /* Skills */
