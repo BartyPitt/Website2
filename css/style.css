@@ -8,9 +8,7 @@ body {
 }
 
 main{
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 html {
@@ -59,7 +57,7 @@ h2 {
     flex-basis:0;
 }
 
-/* Nav bar */
+/* The Css for the skills seciton */
 
 ul {
     display: flex;
@@ -100,24 +98,52 @@ nav li a:visited {
 /* Sections */
 
 section {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     flex-direction: row;
     min-height: 100vh;
+    flex-wrap:wrap ;
 }
 
 
+section#headerPage{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-section#contact,#headerPage {
+section#contact {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
+    width: auto;
 }
+
+#skills div{
+    max-width: 750px;
+}
+
+#about div{
+    max-width: 750px;
+    padding: 1vw;
+}
+
+section ul{
+    max-width: 750px;
+}
+
 
 p {
     width: 100%;
@@ -171,7 +197,6 @@ p {
     display: flex;
 
 }
-
 
 
 .Info >div{
