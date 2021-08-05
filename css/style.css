@@ -39,13 +39,24 @@ h1, h2 {
 }
 
 h1 {
-    font-size:calc(50px + 10vw);
+    font-size:calc(100px + 6vw);
     word-spacing: -0.75ex;
+    line-height: 80%;
+
 }
+
 
 h2 {
     text-transform: uppercase;
     font-size:calc(40px + 5vw);
+}
+
+
+
+#Title{
+    text-align: left;
+    flex-grow: 1;
+    flex-basis:0;
 }
 
 /* Nav bar */
@@ -54,6 +65,11 @@ ul {
     display: flex;
     flex-wrap: wrap;
     padding-inline-start: 0;
+}
+
+nav{
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 nav li {
@@ -84,6 +100,17 @@ nav li a:visited {
 /* Sections */
 
 section {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+
+
+section#contact,#headerPage {
     display: flex;
     align-items: center;
     align-content: center;
@@ -145,6 +172,8 @@ p {
 
 }
 
+
+
 .Info >div{
     position: relative;
     text-align: left;
@@ -158,7 +187,7 @@ p {
 .Sliders{
     z-index: -1;
     position: relative;
-    top -10vh;
+    top: -10vh;
     left: 0;
     height: 80%;
     overflow: hidden;

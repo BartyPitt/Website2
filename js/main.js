@@ -19,7 +19,7 @@ function UpdateWindow() {
 
 var ScrollFunctions = {
     TitlePage(CurrentValue) {
-        BackgroundInfomation.CameraY = 3 + CurrentValue * 5;
+        BackgroundInfomation.CameraY = 2 + CurrentValue * 3;
         BackgroundInfomation.CameraZ = 14 + CurrentValue * 3;
         BackgroundInfomation.Amplitude = CurrentValue * 3;
         BackgroundInfomation.deltaConstant = CurrentValue;
@@ -240,7 +240,6 @@ var clock = new THREE.Clock();
 renderer.setSize(window.innerWidth, window.innerHeight);
 UpdateWindow();
 document.body.appendChild(renderer.domElement);
-
 
 
 window.addEventListener('resize', UpdateWindow);
