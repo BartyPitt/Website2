@@ -4,7 +4,7 @@ Javascript code for threejs
 */
 
 
-function UpdateWindow() {
+function UpdateWindow(): void {
     var width = window.innerWidth;
     var hight = window.innerHeight;
     renderer.setSize(width, hight);
@@ -31,46 +31,7 @@ var ScrollFunctions = {
         return
 
     },
-    /*
-    PortfolioValues(AbsoluteScrollPos) {
-        var CurrentStartPage = 3;
-        var PagePosition = ((0.5 - AbsoluteScrollPos % 1) * 200).toFixed(0) + "%";
-        var PageNumber = Math.floor(AbsoluteScrollPos) - CurrentStartPage;
-        var MovingDivs = document.getElementsByClassName('Sliders');
 
-        let PagePositions = []
-        var Sections = document.getElementById('Portfolio').children;
-        const PortfolioOffset = document.getElementById("Portfolio").offsetTop;
-
-        if (Sections <= 0) {
-        }
-        else {
-            for (var index = 0; index < Sections.length; index++) {
-                var element = Sections.item(index);
-                PagePositions.push(element.offsetTop + PortfolioOffset);
-            }
-        }
-        PagePositions.push(document.body.clientHeight)
-
-        //top of each image should be Absolute - current
-
-        if (PageNumber < 0) {
-        }
-        for (var index = 0; index < MovingDivs.length; index++) {
-            var element = MovingDivs.item(index)
-            if (index == PageNumber) {
-                //console.log(index ,PagePosition );
-                element.style.visibility = 'visible';
-                element.style.left = PagePosition;
-                //element.style.top = PagePosition;
-                console.log(element.style.top);
-            }
-            else {
-                element.style.visibility = 'hidden'
-            }
-        }
-    }
-    */
 }
 
 function PageScrollOffset() {
@@ -79,15 +40,17 @@ function PageScrollOffset() {
     const MainOffset = document.getElementById("MainContent").offsetTop;
 
     var Sections = document.getElementById('MainContent').children;
-    if (Sections < 0) {
+    if (Sections.length < 0) {
     }
     else {
         /*This is acting weirdly and I dont know why.
 
         */
         for (var index = 0; index < Sections.length; index++) {
-            var element = Sections.item(index);
-            PagePositions.push(element.offsetTop);
+            var element  = Sections.item(index);
+            if (element instanceof HTMLElement) {
+                PagePositions.push(element.offsetTop);
+            }
             //console.log(element.textContent , element.offsetTop)
         }
     }
@@ -167,9 +130,9 @@ var BackgroundInfomation = {
 
 function BackgroundUpdater() {
     const positions = geometry.attributes.position.array;
-    delta = clock.getDelta();
+    const delta = clock.getDelta();
     BackgroundInfomation.currentDelta += delta * BackgroundInfomation.deltaConstant;
-    FinalisedDelta = BackgroundInfomation.currentDelta + 1;
+    const FinalisedDelta = BackgroundInfomation.currentDelta + 1;
 
     Camera.position.y = BackgroundInfomation.CameraY;
     Camera.position.z = BackgroundInfomation.CameraZ;
@@ -187,7 +150,7 @@ function BackgroundUpdater() {
 
     scene.fog = new THREE.Fog(BackgroundInfomation.BGColour, 1, 20); // check if you need to reinstance
     //301934
-    scene.background.setHSL(0.8, 0.35, BackgroundInfomation.backgroundSatuation);
+    (<THREE.Color>scene.background).setHSL(0.8, 0.35, BackgroundInfomation.backgroundSatuation);
     mesh.material.color.setHSL(0.92, 73, BackgroundInfomation.meshSaturation);
     geometry.attributes.position.needsUpdate = true;
     material.needsUpdate = true;
@@ -221,9 +184,10 @@ noise.seed(10);
 
 function GenerateGrid(InputDimentions, z) {
     const Output = []
-    for (y = 0; y < InputDimentions.Height; y++) {
+
+    for (var y = 0; y < InputDimentions.Height; y++) {
         Output.push([])
-        for (x = 0; x < InputDimentions.Width; x++) {
+        for (var x = 0; x < InputDimentions.Width; x++) {
             var value = noise.simplex3(x / 10, y / 10, z);
             Output[y].push(value * 2);
         }
@@ -232,7 +196,7 @@ function GenerateGrid(InputDimentions, z) {
 }
 
 function GridToVector(InputGrid, scale) {
-    Output = []
+    const Output = []
     InputGrid.forEach((Row, Y) => {
         Row.forEach((Point, X) => {
             var Value = [Point * scale, X, Y];
@@ -246,12 +210,12 @@ function GridToMeshMap(InputDimentions) {
     const Output = []
     const TotalNumberOfPoints = InputDimentions.Width * InputDimentions.Height;
     const Endpoint = TotalNumberOfPoints - InputDimentions.Width
-    for (i = 0; i < Endpoint; i++) {
+    for (var i : number = 0; i < Endpoint; i++) {
         if ((i + 1) % InputDimentions.Width != 0) {
-            a = i;
-            b = i + 1;
-            c = i + InputDimentions.Width;
-            d = i + InputDimentions.Width + 1;
+            const a : number = i;
+            const b = i + 1;
+            const c = i + InputDimentions.Width;
+            //const d = i + InputDimentions.Width + 1;
             //console.log(a,b,c,d)
             Output.push([a, b, c])
             //Output.push([b,c,d])
