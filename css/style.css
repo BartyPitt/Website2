@@ -30,11 +30,11 @@ canvas#BackGroundCanvas{
 h1, h2 {
     font-weight: bold;
     text-shadow: 0.4vw 0.4vw cadetblue;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
 }
 
 h1 {
-    font-size:calc(100px + 6vw);
+    font-size:calc(100px + 4vw);
     word-spacing: -0.75ex;
     line-height: 80%;
 
@@ -106,7 +106,6 @@ section {
     justify-content: center;
     text-align: end;
     min-height: 100vh;
-    flex-wrap:wrap ;
 }
 
 
@@ -278,4 +277,24 @@ svg {
 
 svg:hover{
     fill: cadetblue;
+}
+
+@media(max-width:900px){
+
+h1,h2{
+    overflow-wrap: break-word
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    max-width: 90%;
+}
+
+p{
+    
+}
+
+
 }
