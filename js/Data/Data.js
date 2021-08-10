@@ -12,6 +12,7 @@ HeadLabs = {
 let Data = [
 RCCar = {
 "title": "4x4 in Schools",
+"tags" : Set(["Electrical" ,"Mechanical"]),
 "description": "Between the years of 2015 - 2016 I took part in 4x4 in schools with the team making the international finals in 2016.",
 "image":["Images/portfolio/RCCar/1.jpg","Images/portfolio/RCCar/2.jpg"],
 "Body": ["Creating, designing and 3d printing a steering, and suspension mechanism for the car",
@@ -22,6 +23,7 @@ RCCar = {
 
 HeadLabs = {
     "title":"Head Labs Internship",
+    "tags" : Set(["Electrical" ,"Mechanical" , "Software"]),
     "Role":"Chief Technology Officer",
     "description":"An internship based around the construction of the Head Labs Drop Tower",
     "image":["Images/portfolio/HeadLabs/DropTower.JPG","Images/portfolio/HeadLabs/DropTowerCode.PNG","Images/portfolio/HeadLabs/DropTowerCode2.PNG","Images/portfolio/HeadLabs/VibratingBlock.PNG"],
@@ -34,6 +36,7 @@ HeadLabs = {
 
 Steam = {
     "title": "Portable Steam Iron",
+    "tags" : Set(["Electrical" ,"Mechanical" , "Software"]),
     "Role": " Chief Technology Officer",
     "description":"A project centred about designing, making and testing the world’s first truly portable battery powered steam iron.",
     "image":["Images/portfolio/Steam/Steam.jpg","Images/portfolio/Steam/Machining.jpg","Images/portfolio/Steam/untitled.17.jpg","Images/portfolio/Steam/arcetecture.jpg"],
@@ -46,6 +49,7 @@ Steam = {
 
 Kickstarter = {
     "title":"Predicting Kickstarter Success",
+    "tags" : Set(["Software"]),
     "Role":"Software development",
     "description":"Working with a small group on a Machine Learning Project, based around Kickstarter project titles. ",
     "image":["Images/portfolio/KickStarter/b812d5c9-288b-4436-8267-3496eccb7d65_rw_1200.png","Images/portfolio/KickStarter/BigData.PNG"],
@@ -58,6 +62,7 @@ Kickstarter = {
 
 Robot = {
     "title":"Connect 4 Robot",
+    "tags" : Set(["Mechanical" , "Software"]),
     "Role":" Software development.",
     "description": "Training a robot arm so that it could play connect 4 against a human player",
     "image":["Images/portfolio/Robot/Gazebo_and_Rviz_side_by_side.png","Images/portfolio/Robot/snapshot_one.png","Images/portfolio/Robot/yellow_masks.png"],
@@ -71,7 +76,7 @@ Robot = {
 
 Calendar = {
     "title":"IoT Calendar",
-    
+    "tags" : Set(["Electrical" , "Software"]),
     "Role":"Lead design.",
     "description":"Working with low power IoT chips and electronics to design a system that can be successfully integrated into an existing calendar system.",
     "image":["Images/portfolio/Iot/Epaper.JPG","Images/portfolio/Iot/FritzigCircuit.PNG","Images/portfolio/Iot/IOTCode.PNG"],
@@ -84,6 +89,7 @@ Calendar = {
 
 Bo = {
     "title":"Veteran Vehicle Motor Club",
+    "tags" : Set(["Mechanical"]),
     "Role":"Chairman",
     "description":"Reverse engineering parts and then redesigning for manufacture using modern manufacturing techniques.",
     "image":["Images/portfolio/Bo/35885741_2080500135552705_1354870780965421056_n.jpg","Images/portfolio/Bo/A5Bo3.png","Images/portfolio/Bo/NEC.jpg"],
@@ -96,6 +102,7 @@ Bo = {
 
 SelfBalancing = {
     "title": "Self balancing Dancing Robot",
+    "tags" : Set(["Electrical", "Software"]),
     "Role": "Software engineering.",
     "description": "Creating a two-wheeled balancing robot capable of dancing in time with a song played from a speaker.",
     "image":null,
@@ -108,6 +115,7 @@ SelfBalancing = {
 
 Polaris = {
     "title":"Polaris modern day day-shapes",
+    "tags" : Set(["Mechanical"]),
     "Role":"Electrical and Mechanical Engineer.",
     "description":"Working within a small group to create a high-level concept for brining inter-ship communication into the 21st century.",
     "image":["Images/portfolio/Polaris/MainAssembly.png","Images/portfolio/Polaris/MainAssembly2.png"],

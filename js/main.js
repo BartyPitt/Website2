@@ -214,7 +214,7 @@ function GridToMeshMap(InputDimentions) {
             c = i + InputDimentions.Width;
             d = i + InputDimentions.Width + 1;
             //console.log(a,b,c,d)
-            Output.push([a, b, c])
+            Output.push([a, b, c]);
             //Output.push([b,c,d])
         }
     }
