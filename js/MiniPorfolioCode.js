@@ -4,7 +4,7 @@ The base idea is that it creates a small icon for each of the items in the portf
 At some point this and the main portfolio code should be merged
 */
 
-CurrentlyPressedButtons = new Set()
+CurrentlyPressedButtons = new Set(["Electrical" ,"Mechanical" , "Software"]) // Make sure all of the tag names the same names everywhere. Atm i dont have anyway for tag parity. 
 
 PortfolioSection = document.getElementById("Portfolio")
 
@@ -22,7 +22,7 @@ function UpdatePortfolio(){
             }
         }else{
             if (ShouldBeDisplayed){
-                CreateEntry(page , PortfolioSection)
+                CreateEntry(page , PortfolioSection,itterator)
             }
         }
     });
@@ -31,7 +31,21 @@ function UpdatePortfolio(){
     */
 }
 
-function CreateEntry(Page , location){
+function CreateEntry(Page , location , itterator){
+    InfoDiv = document.createElement("a");
+    InfoDiv.setAttribute("Class" , "Info");
+    InfoDiv.setAttribute("id" , Page.title); 
+    mainText = document.createElement("h2");
+    mainText.textContent = Page.title;
+    TempImage = new Image();
+    TempImage.src = Page.image[0];
+    MinorDiv = document.createElement("div");
+    MinorDiv.appendChild(mainText);
+    InfoDiv.appendChild(MinorDiv);
+    InfoDiv.appendChild(TempImage);
+    InfoDiv.href = "http:/bartypitt.com/project.html?id=" +itterator;
+    console.log(InfoDiv.href);
+    location.appendChild(InfoDiv)
     //Add in the part where this actually does something.
 }
 
@@ -46,5 +60,6 @@ function toggle(button , id){
 
     }
     UpdatePortfolio()
-
 }
+
+UpdatePortfolio(); 
