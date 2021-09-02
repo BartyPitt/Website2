@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: black;
+    color: white;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-weight: bold;
+    text-shadow: 0.4vw 0.4vw cadetblue;
+    background-color: black;
+    padding: 2vh;
+}
+
+h1 {
+    font-size: 13vw;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 5vw;
+    mix-blend-mode: mul;
+}
+
+#Portfolio {
+    z-index: 4;
+    position: relative;
+}
+
+.Info{
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    max-height: 50vw;
+}
+
+.Info>div{
+    position: absolute;
+    bottom: 20%;
+    max-width: 1000px;
+    z-index: 2;
+}
+
+.Info>img{
+    /*
+    ok so this should work however it will only work with 
+    */
+    width: 50vw;
+    height: 50vw;
+    object-fit: cover;
+    z-index: 1;
+    filter: grayscale(1);
+    object-position: 100%;
+    scale: 100%;
+    animation:image-movement 6s infinite;
+}
+
+.Info:hover img{
+    filter: grayscale(0);
+}
+
+@keyframes image-movement {
+    0% { object-position: 0%; }
+    50% { object-position: 100%; }
+    100% {object-position: 0%; }
+}
+
+
+div>h2:hover{
+    text-shadow:0.4vw 0.4vw purple;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
