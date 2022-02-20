@@ -66,12 +66,14 @@ ul {
 
 nav{
     flex-grow: 1;
-    flex-basis: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
+    flex-grow: 1;
     list-style-type: none;
-    font-size: 150%;
+    font-size: 25px;
 }
 
 nav li a {
