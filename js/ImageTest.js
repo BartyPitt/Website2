@@ -1,7 +1,8 @@
 
 /*
 <a class=Info>
-    <div>
+    <div class = OveralImage>
+    <div class = text>
         <h2>
             Aura Smart Lamp
         </h2>

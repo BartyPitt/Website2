@@ -71,7 +71,7 @@ nav{
 
 nav li {
     list-style-type: none;
-    font-size: 4vh;
+    font-size: 150%;
 }
 
 nav li a {
@@ -279,7 +279,7 @@ svg:hover{
     fill: cadetblue;
 }
 
-@media(max-width:900px){
+@media(max-width:1200px){
 
 h1,h2{
     overflow-wrap: break-word
