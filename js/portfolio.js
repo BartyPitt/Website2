@@ -17,21 +17,21 @@ I have not figured what to do after that.
     <img src = 'Images\portfolio\AuraLamp.png'>
 </a>
  the target thing to create */
- 
+
 
 PortfolioSection = document.getElementById("Portfolio")
 console.log(PortfolioSection);
 
-Data.forEach((page , itterator) => {
-    if(page.image){
+Data.forEach((page, itterator) => {
+    if (page.image) {
         InfoDiv = document.createElement("button");
-        InfoDiv.setAttribute("Class" , "Info");
+        InfoDiv.setAttribute("Class", "Info");
         mainText = document.createElement("h2");
         mainText.textContent = page.title;
-        
+
         SubText = document.createElement("p");
         SubText.textContent = page.description;
-        
+
         TempImage = new Image();
         TempImage.src = page.image[0];
         MinorDiv = document.createElement("div");
@@ -39,15 +39,12 @@ Data.forEach((page , itterator) => {
         MinorDiv.appendChild(SubText);
         InfoDiv.appendChild(TempImage);
         InfoDiv.appendChild(MinorDiv);
-        InfoDiv.href = "http:/bartypitt.com/project.html?id=" +itterator;
+        InfoDiv.setAttribute("onclick", "location.href='http:/bartypitt.com/project.html?id=" + itterator + "';");
         console.log(InfoDiv.href);
         PortfolioSection.appendChild(InfoDiv)
-        InfoDiv.setAttribute("style" , `
-            background: hsl(${itterator*30} 80% 80%);
-            
-            `)
+        InfoDiv.setAttribute("style", `background: hsl(${itterator * 30} 80% 80%);`)
     }
-    else{
+    else {
         console.log(page.title);
     }
 });
