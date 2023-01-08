@@ -40,7 +40,7 @@ h2 {
 
 /* Sections */
 
-section {
+#Portfolio {
     flex-basis: 100%;
     display: flex;
     align-items: center;
@@ -50,8 +50,9 @@ section {
     text-align: left;
     min-height: 50vh;
     padding: 1vw;
-    max-width: 500px;
+    max-width: 50%;
     min-width: 40vw;
+
 }
 ul{
     text-align: justify;
@@ -79,5 +80,9 @@ img {
     padding: 1vw;
     object-fit: cover;
     min-width: 40vw;
+}
+
+#TagLineSide{
+
 }
 
