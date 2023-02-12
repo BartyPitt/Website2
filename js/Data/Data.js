@@ -48,7 +48,7 @@ Kickstarter = {
     "title":"Predicting Kickstarter Success",
     "Role":"Software development",
     "description":"Working with a small group on a Machine Learning Project, based around Kickstarter project titles. ",
-    "image":["Images/portfolio/KickStarter/b812d5c9-288b-4436-8267-3496eccb7d65_rw_1200.png","Images/portfolio/KickStarter/BigData.PNG"],
+    "image":["Images/portfolio/KickStarter/b812d5c9-288b-4436-8267-3496eccb7d65_rw_1200.jpg","Images/portfolio/KickStarter/BigData.PNG"],
     "Body":["Using a variety of machine learning and statistical models to try and predict a kickstarters campaigns chance of success",
             "Using Natural Language processing to analyse the title of the project.",
             "Analysing the data to gain insights on what lead to a successful project."
