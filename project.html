@@ -6,21 +6,27 @@
     <meta name="author" content="Barty Pitt">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <title>Barty Pitt's Portfolio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.google.com/download?family=Atkinson%20Hyperlegible" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/project.css">
-    <script src= "js/Data/Data.js"></script>
-    <script defer src = "js\project.js"></script>
+    <script src="js/Data/Data.js"></script>
+    <script defer src="js\project.js"></script>
 </head>
 
 <body>
-    <main id = "main">
-        <section id="HeroContent">
+    <main id="main">
+        <section id="TextZone">
+            <h1 id="MainTitle"></h1>
+            <div id="ButtonContainer">
+                <button onclick="GoToMenu()">Back</button>
+                <button onclick = "GoToNext()">Next</button>
+            </div>
+            <p id="Subtext"></p>
+            <ul id="BulletPoints"></ul>
         </section>
-        <section id = "TextZone">
-            <h1 id = "MainTitle"></h1>
-            <p id = "Subtext"></p>
-            <ul  id = "BulletPoints"></ul>
+        <section id="ImageContent">
         </section>
     </main>
 </body>

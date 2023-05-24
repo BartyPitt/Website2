@@ -1,39 +1,44 @@
-function ContentCreator(DataIn){
-    console.log(DataIn);
+function ContentCreator(DataIn) {
     Title = document.getElementById("MainTitle");
     Title.textContent = DataIn.title;
     SubText = document.getElementById("Subtext")
     SubText.textContent = DataIn.description;
     BulletList = document.getElementById("BulletPoints")
 
-    HeroSpot = document.getElementById("HeroContent");
-    if (DataIn.Hero){
+    HeroSpot = document.getElementById("ImageContent");
+    if (DataIn.Hero) {
         HeroSpot.innerHTML = DataIn.Hero
-        //HeroSpot.innerHTML(DataIn.Hero)
     }
-    else{
+    else {
         ImagePath = DataIn.image[0]
-        TempImage = new Image(500 , 300);
+        TempImage = new Image();
         TempImage.src = ImagePath;
-        console.log()
         HeroSpot.appendChild(TempImage);
     }
     DataIn.Body.forEach(ListItem => {
         bullet = document.createElement("li");
         bullet.textContent = ListItem;
-        console.log(ListItem);
         BulletList.appendChild(bullet);
     });
-    ImageZone = document.getElementById("main");
-    if(DataIn.image){
-    DataIn.image.forEach(ImagePath => { 
-        TempImage = new Image(500 , 300);
-        TempImage.src = ImagePath;
-        ImageZone.appendChild(TempImage);
-    });
-}
+    ImageZone = document.getElementById("ImageContent");
+    if (DataIn.image) {
+        DataIn.image.forEach(ImagePath => {
+            TempImage = new Image();
+            TempImage.src = ImagePath;
+            ImageZone.appendChild(TempImage);
+        });
+    }
 };
 
+function GoToMenu(){
+    var currentUrl = window.location.host;
+    window.location.href = "/portfolio.html"
+}
+function GoToNext(){
+    const NextNumber = (PageNumber+ 1)% Object.keys(Data).length;
+    window.location.href = `project.html?id=${NextNumber}`
+}
+
 let params = (new URL(document.location)).searchParams;
-let PageNumber =  parseInt(params.get('id')); // is the string "Jonathan Smith".
+const PageNumber = parseInt(params.get('id')); // is the string "Jonathan Smith".
 ContentCreator(Data[PageNumber]);

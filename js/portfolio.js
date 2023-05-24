@@ -40,11 +40,7 @@ Data.forEach((page, itterator) => {
         InfoDiv.appendChild(TempImage);
         InfoDiv.appendChild(MinorDiv);
         InfoDiv.setAttribute("onclick", "location.href='http:/bartypitt.com/project.html?id=" + itterator + "';");
-        console.log(InfoDiv.href);
         PortfolioSection.appendChild(InfoDiv)
         InfoDiv.setAttribute("style", `background: hsl(${itterator * 30} 80% 80%);`)
-    }
-    else {
-        console.log(page.title);
     }
 });
