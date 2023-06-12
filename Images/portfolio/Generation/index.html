@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Barty Pitt" content="Barty Pitt">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>🟦</title>
+    <script defer src="index.js"></script>
+    <style>
+        body {
+            font-family: 'Atkinson Hyperlegible', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:  darkslateblue;
+            color: bisque;
+        }
+        svg {
+            min-width: 600px;
+            width: 40%;
+            border: 1em solid bisque;
+        }
+        h1{
+            font-size:8em;
+            margin:1em;
+        }
+        p{
+            min-width: 600px;
+            width: 40%;
+            font-size: 2em
+        }
+        input{
+            font-family: inherit;
+            font-size: 2em;
+            margin: 1em;
+            border: 0.25em solid bisque;
+            background-color:  bisque;
+            color: darkslateblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unique Generation</h1>
+    <p>
+        Enter your desired text in the box below. Experiment with different inputs and witness the unique creations that emerge from your words. Feel free to share and showcase your generated artwork with the world.
+    </p>
+    <input type="text" id = "input" placeholder="..." ></input>
+    <svg id="canvas" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
+        <defs>
+            <circle id="Circle" , cx="0" , cy="0" , r="0.5" />
+            <g id="QuarterC" transform="translate(-0.5 , -0.5)">
+                <path d="M 0 0 L  1 0 A 1 1 0 0 1 0 1 " />
+            </g>
+            <rect id="Square" x="-0.5" y="-0.5" width="1" height="1" />
+            <path id="Triangle" d="M -0.5 -0.5 L 0.5 -0.5 L 0.5 0.5 " />
+        </defs>
+    </svg>
+</body>
+
+</html>

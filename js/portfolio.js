@@ -23,7 +23,7 @@ PortfolioSection = document.getElementById("Portfolio")
 console.log(PortfolioSection);
 
 Data.forEach((page, itterator) => {
-    if (page.image) {
+    if (page.iconImage) {
         InfoDiv = document.createElement("button");
         InfoDiv.setAttribute("Class", "Info");
         mainText = document.createElement("h2");
@@ -33,7 +33,7 @@ Data.forEach((page, itterator) => {
         SubText.textContent = page.description;
 
         TempImage = new Image();
-        TempImage.src = page.image[0];
+        TempImage.src = page.iconImage;
         MinorDiv = document.createElement("div");
         MinorDiv.appendChild(mainText);
         MinorDiv.appendChild(SubText);
