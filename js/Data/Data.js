@@ -25,7 +25,7 @@ let Data = [
         "title": "Head Labs Internship",
         "Role": "Chief Technology Officer",
         "description": "An internship based around the construction of the Head Labs Drop Tower",
-        "iconImage" : "Images/portfolio/HeadLabs/DropTowerSmall.JPG",
+        "iconImage" : "Images/portfolio/HeadLabs/DropTowerSmall.jpg",
         "image": ["Images/portfolio/HeadLabs/DropTower.JPG", "Images/portfolio/HeadLabs/DropTowerCode.PNG", "Images/portfolio/HeadLabs/DropTowerCode2.PNG", "Images/portfolio/HeadLabs/VibratingBlock.PNG"],
         "Body": ["Designing and building the rails, hoisting drop system and electronics for the drop tower. Building a base that would allow the drop tower to resist up to 18 tonnes of force without damaging the impact sensors. ",
             "Coding the system such that it can capture data 2 million times a second from the available sensors.",
