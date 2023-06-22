@@ -89,7 +89,7 @@ let Data = [
         "title": "IoT Calendar",
         "Role": "Lead design.",
         "description": "Working with low power IoT chips and electronics to design a system that can be successfully integrated into an existing calendar system.",
-        "iconImage" : "Images/portfolio/Iot/EpaperSmall.JPG",
+        "iconImage" : "Images/portfolio/Iot/EpaperSmall.jpg",
         "image": ["Images/portfolio/Iot/Epaper.JPG", "Images/portfolio/Iot/FritzigCircuit.PNG", "Images/portfolio/Iot/IOTCode.PNG"],
         "Body": ["Creating a circuit built around the ESP32 chip.",
             "Using Microsofts rest API to get data from Microsoft outlook calendar.",
